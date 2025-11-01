@@ -473,6 +473,8 @@ a {
 
 .advantages-list-item {
     width: 288px;
+    text-align: left;
+    margin: 0 auto;
 }
 
 .advantages-types {
@@ -482,9 +484,8 @@ a {
     letter-spacing: 0.02em;
     color: #2e2f42;
     text-align: center;
-    margin-bottom: 8px;/
+    margin-bottom: 8px;
 }
-
 
 .advantages-link {
     font-weight: 500;
@@ -492,7 +493,7 @@ a {
     line-height: 24px;
     letter-spacing: 0.02em;
     color: #434455;
-    text-align: center;
+    text-align: left;
     margin: 0;
 }
 
@@ -510,42 +511,6 @@ a {
 
     .advantages-list-item {
         width: 356px;
-    }
-}
-
-@media only screen and (min-width: 1158px) {
-    .advantages-section {
-        padding: 120px 0;
-    }
-
-    .advantages-list-item {
-        width: 264px;
-    }
-
-    .advantages-list {
-        gap: 24px;
-    }
-
-    .advantages-types {
-        font-weight: 500;
-        font-size: 20px;
-
-    }
-
-    .advantages-link {
-        font-weight: 400;
-    }
-
-    .advantages-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid #8e8f99;
-        border-radius: 4px;
-        width: 100%;
-        height: 112px;
-        margin-bottom: 8px;
-        background: #f4f4fd;
     }
 }
 
@@ -793,7 +758,8 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    max-width: 288px;
+    max-width: 288px;   
+    text-align: center;
 }
 
 .footer-logo .logo-part {
@@ -923,7 +889,6 @@ a {
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: #fff;
-    margin: 0 auto;
 }
 
 .footer-button:hover,
@@ -956,7 +921,7 @@ a {
 
 .footer-left-content {
     align-items: flex-start;
-    align-items: center !important;
+    text-align: left;
 }
 
 .footer-form {
@@ -1274,3 +1239,48 @@ input[type="checkbox"]:checked+.agreement-wrapper>.agreement-checkbox {
 .mobile-contacts {
     margin-bottom: 32px;
 }
+
+
+@media only screen and (min-width: 1158px) {
+    .advantages-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .advantages-list-item {
+        flex: 1 1 calc((100% - 72px) / 4);
+        text-align: left;
+    }
+
+    .advantages-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 112px;
+        border: 1px solid #8e8f99;
+        border-radius: 4px;
+        background-color: #f4f4fd;
+        margin-bottom: 8px;
+    }
+
+    .advantages-types {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: #2e2f42;
+        text-align: left;
+        margin-bottom: 8px;
+    }
+
+    .advantages-link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #434455;
+    }
+}
+
