@@ -8,6 +8,18 @@ body {
     background-color: #fff;
 }
 
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.page-footer,
+.hero-section,
+.hero-container {
+    overflow-x: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -53,10 +65,12 @@ a {
 }
 
 .container {
-    min-width: 320px;
+    max-width: 320px;
     padding: 0 16px;
     margin: 0 auto;
 }
+
+
 
 @media screen and (min-width:768px) {
     .container {
@@ -289,7 +303,11 @@ a {
         align-items: flex-start;
         flex-direction: column;
         gap: 24px;
+    }
+
+    .mobile-contacts {
         margin-bottom: 48px;
+        font-style: normal;
     }
 
     .mobile-contacts-link {
@@ -458,21 +476,24 @@ a {
 }
 
 .advantages-types {
+    font-weight: 700;
     font-size: 36px;
-    line-height: 1.2;
+    line-height: 40px;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    margin-bottom: 8px;
     text-align: center;
+    margin-bottom: 8px;/
 }
 
 
 .advantages-link {
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 24px;
     letter-spacing: 0.02em;
     color: #434455;
+    text-align: center;
+    margin: 0;
 }
 
 @media only screen and (max-width: 1157px) {
@@ -640,6 +661,7 @@ a {
 }
 
 .portfolio-title {
+    font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
     text-align: center;
@@ -665,6 +687,11 @@ a {
     background-color: #fff;
 }
 
+.portfolio-list-item:hover .overlay,
+.portfolio-list-item:focus .overlay {
+    transform: translateY(0);
+}
+
 .portfolio-wrapper {
     position: relative;
     overflow: hidden;
@@ -688,15 +715,15 @@ a {
 }
 
 .portfolio-advantage {
-
     border-bottom: 1px solid #e7e9fc;
     border-left: 1px solid #e7e9fc;
     border-right: 1px solid #e7e9fc;
     padding: 32px 16px;
-    width: 288px;
+    width: 100%;
 }
 
 .digital-service-item {
+    font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
@@ -705,6 +732,7 @@ a {
 }
 
 .creative-item {
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -729,11 +757,6 @@ a {
     }
 }
 
-.portfolio-advantage {
-    width: 356px;
-}
-
-
 @media only screen and (min-width: 1158px) {
     .portfolio-section {
         padding: 120px 0;
@@ -746,10 +769,6 @@ a {
     .portfolio-list-item {
         width: calc((100% - 24px * 2) / 3);
     }
-
-    .portfolio-advantage {
-        width: 360px;
-    }
 }
 
 .page-footer {
@@ -761,7 +780,10 @@ a {
     .footer-container {
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
+        text-align: center;
+        align-items: center;
         gap: 72px;
     }
 }
@@ -776,7 +798,13 @@ a {
 
 .footer-logo .logo-part {
     color: #f4f4fd;
+}
 
+.footer-logo {
+    display: block;
+    margin: 0 auto 16px auto;
+    width: 116px;
+    height: 24px;
 }
 
 .footer-content-item {
@@ -789,7 +817,6 @@ a {
 .footer-right-content {
     display: flex;
     flex-direction: column;
-    max-width: 208px;
     gap: 16px;
 }
 
@@ -873,7 +900,6 @@ a {
     line-height: 2;
     letter-spacing: 0.04em;
     color: #fff;
-    margin-bottom: 16px;
 }
 
 .form-input::placeholder {
@@ -925,25 +951,55 @@ a {
         padding: 96px 0 96px 96px;
     }
 
+}
 
-    .footer-left-content {
-        align-items: flex-start;
-    }
 
+.footer-left-content {
+    align-items: flex-start;
+    align-items: center !important;
+}
+
+.footer-form {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 767px) {
     .footer-form {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .footer-form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         gap: 24px;
     }
 
-    .label-text {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #fff;
-        display: flex;
-        margin-bottom: 16px;
+    .form-input {
+        width: 264px;
     }
+
+    .footer-button {
+        margin: 0;
+    }
+}
+
+.label-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    display: flex;
+    margin-bottom: 16px;
 }
 
 @media only screen and (min-width: 1158px) {
@@ -1213,4 +1269,8 @@ input[type="checkbox"]:checked+.agreement-wrapper>.agreement-checkbox {
     .modal-form-input {
         padding: 11px 38px;
     }
+}
+
+.mobile-contacts {
+    margin-bottom: 32px;
 }
